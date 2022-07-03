@@ -9,8 +9,8 @@ export default class Slider {
 	showSlides(n) {
 		if (n > this.slides.length) {
 			this.slideIndex = 1;
-		} 
-		
+		}
+
 		if (n < 1) {
 			this.slideIndex = this.slides.length;
 		}
@@ -19,7 +19,17 @@ export default class Slider {
 			slide.classList.remove('show-slides');
 		});
 
-		this.slides[this.slideIndex -1].classList.add('show-slides');
+		this.slides[this.slideIndex - 1].classList.add('show-slides');
+
+		try {
+			if (n === 3) {
+				setInterval(() => {
+					this.hanson.style.transform = `translateY(0)`;
+				}, 3000);
+			} else {
+				this.hanson.style.transform = `translateY(100%)`;
+			}
+		} catch (error) {}
 	}
 
 	plusSlides(n) {
@@ -27,6 +37,10 @@ export default class Slider {
 	}
 
 	render() {
+		try {
+			this.hanson = document.querySelector('.hanson');
+		} catch (error) {}
+
 		this.btns.forEach(el => {
 			el.addEventListener('click', () => {
 				this.plusSlides(1);
