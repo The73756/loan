@@ -1247,7 +1247,7 @@ a:active {
 	z-index: 10
 }
 
-.feed__slider .slick-prev {
+.slick-prev--feed {
 	z-index: 12;
 	position: absolute;
 	bottom: 0;
@@ -1261,7 +1261,7 @@ a:active {
 	margin-right: 12px
 }
 
-.feed__slider .slick-prev svg {
+.slick-prev--feed svg {
 	position: absolute;
 	width: 12px;
 	height: 12px;
@@ -1271,7 +1271,7 @@ a:active {
 	transform: translateX(-65%) translateY(-50%)
 }
 
-.feed__slider .slick-next {
+.slick-next--feed {
 	z-index: 12;
 	position: absolute;
 	bottom: 0;
@@ -1284,7 +1284,7 @@ a:active {
 	cursor: pointer
 }
 
-.feed__slider .slick-next svg {
+.slick-next--feed svg {
 	position: absolute;
 	width: 12px;
 	height: 12px;
@@ -2063,7 +2063,7 @@ a:active {
 	transform: none
 }
 
-.page > div {
+.page>div {
 	display: none;
 }
 
