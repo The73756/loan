@@ -47,27 +47,30 @@ export default class MiniSlider extends Slider {
 	}
 
 	init() {
-		this.container.style.cssText = `
+		try {
+			this.container.style.cssText = `
 			display: flex;
 			flex-wrap: wrap;
 			overflow: hidden;
 			align-items: flex-start;
 		`;
 
-		this.bindTriggers();
-		this.decorizeSlides();
-		if (this.autoplay) {
-			if (this.stopable) { // я не придумал как сюда вклинить делигирование, поэтому код выглядит как калл
-				this.slides.forEach(slide => {
-					slide.addEventListener('mouseenter', (e) => {
-						clearInterval(this.interval);
+			this.bindTriggers();
+			this.decorizeSlides();
+			if (this.autoplay) {
+				if (this.stopable) { // я не придумал как сюда вклинить делигирование, поэтому код выглядит как калл
+					this.slides.forEach(slide => {
+						slide.addEventListener('mouseenter', (e) => {
+							clearInterval(this.interval);
+						});
+						
+						slide.addEventListener('mouseleave', () => {
+							this.startTime(5000);
+						});
 					});
-					slide.addEventListener('mouseleave', () => {
-						this.startTime(5000);
-					});
-				});
+				}
+				this.startTime(5000);
 			}
-			this.startTime(5000);
-		}
+		} catch (error) {}
 	}
 }
