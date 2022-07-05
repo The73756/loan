@@ -1160,6 +1160,10 @@ a:active {
 	-webkit-appearance: none
 }
 
+.join__evolution .form__block div select option {
+	background-color: #2546bc;
+}
+
 .join__evolution .form__block div input {
 	width: 340px;
 	height: 64px;

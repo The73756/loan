@@ -2,6 +2,7 @@ import MainSlider from './modules/sliders/slider-main';
 import MiniSlider from './modules/sliders/slider-mini';
 import VideoPlayer from './modules/playVideo';
 import Differense from './modules/differense';
+import Form from './modules/form';
 
 window.addEventListener('DOMContentLoaded', () => {
 	const slider = new MainSlider({
@@ -43,4 +44,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	const differense = new Differense('.officerold', '.officernew', '.officer__card-item');
 	differense.init();
+
+	new Form ('.form', 'assets/question.php').init();
 });
