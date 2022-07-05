@@ -11,6 +11,14 @@ window.addEventListener('DOMContentLoaded', () => {
 	});
 	slider.render();
 
+	const modulePageSlider = new MainSlider({
+		'container': '.moduleapp',
+		'btns': '.next',
+		'nextBtns': '.nextmodule', //несколько кнопок
+		'prevBtns': '.prevmodule', //несколько кнопок
+	});
+	modulePageSlider.render();
+
 	const showUpSlider = new MiniSlider({
 		'container': '.showup__content-slider',
 		'next': '.showup__next',
@@ -45,5 +53,5 @@ window.addEventListener('DOMContentLoaded', () => {
 	const differense = new Differense('.officerold', '.officernew', '.officer__card-item');
 	differense.init();
 
-	new Form ('.form', 'assets/question.php').init();
+	new Form('.form', 'assets/question.php').init();
 });
