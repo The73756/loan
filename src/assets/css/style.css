@@ -1926,6 +1926,10 @@ a:active {
 	opacity: .5
 }
 
+.download {
+	cursor: pointer;
+}
+
 .module__info-book .download {
 	border: 1px solid rgba(0, 0, 0, .2);
 	border-radius: 4px;

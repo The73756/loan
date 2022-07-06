@@ -4,6 +4,7 @@ import VideoPlayer from './modules/playVideo';
 import Differense from './modules/differense';
 import Form from './modules/form';
 import Accordion from './modules/accordion';
+import Download from './modules/download';
 
 window.addEventListener('DOMContentLoaded', () => {
 	const slider = new MainSlider({
@@ -54,4 +55,5 @@ window.addEventListener('DOMContentLoaded', () => {
 	new Differense('.officerold', '.officernew', '.officer__card-item').init();
 	new Form('.form', 'assets/question.php').init();
 	new Accordion('.module__info-show .plus', '.module__info-show').init();
+	new Download('.download').init();
 });
