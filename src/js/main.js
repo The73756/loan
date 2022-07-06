@@ -3,6 +3,7 @@ import MiniSlider from './modules/sliders/slider-mini';
 import VideoPlayer from './modules/playVideo';
 import Differense from './modules/differense';
 import Form from './modules/form';
+import Accordion from './modules/accordion';
 
 window.addEventListener('DOMContentLoaded', () => {
 	const slider = new MainSlider({
@@ -48,8 +49,9 @@ window.addEventListener('DOMContentLoaded', () => {
 	feedSlider.init();
 
 	new VideoPlayer('.showup .play', '.overlay').init();
-	new Differense('.officerold', '.officernew', '.officer__card-item').init();
 	new VideoPlayer('.module__video-item .play','.overlay').init();
 
+	new Differense('.officerold', '.officernew', '.officer__card-item').init();
 	new Form('.form', 'assets/question.php').init();
+	new Accordion('.module__info-show .plus', '.module__info-show').init();
 });

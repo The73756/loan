@@ -201,8 +201,15 @@ a:active {
 }
 
 .msg {
-	display: none;
+	max-height: 0;
+	opacity: 0;
+	transition: max-height 1s ease-out, opacity 0.5s ease-out;
 	margin-top: 20px
+}
+
+.msg--active {
+	max-height: 100% !important;
+	opacity: 1 !important;
 }
 
 .plus {
@@ -2067,11 +2074,11 @@ a:active {
 	transform: none
 }
 
-.page > div {
+.page>div {
 	display: none;
 }
 
-.moduleapp > div {
+.moduleapp>div {
 	display: none;
 }
 
