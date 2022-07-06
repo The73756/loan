@@ -47,11 +47,9 @@ window.addEventListener('DOMContentLoaded', () => {
 	});
 	feedSlider.init();
 
-	const player = new VideoPlayer('.showup .play', '.overlay');
-	player.init();
-
-	const differense = new Differense('.officerold', '.officernew', '.officer__card-item');
-	differense.init();
+	new VideoPlayer('.showup .play', '.overlay').init();
+	new Differense('.officerold', '.officernew', '.officer__card-item').init();
+	new VideoPlayer('.module__video-item .play','.overlay').init();
 
 	new Form('.form', 'assets/question.php').init();
 });
